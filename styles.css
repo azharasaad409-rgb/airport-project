@@ -1,0 +1,74 @@
+/* RESET بسيط */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTAINER (هنا الحل 🔥) */
+.container {
+    width: 80%;
+    margin: 40px auto;   /* هذا يخليها في النص */
+    text-align: center;
+}
+
+/* TITLE */
+.title {
+    margin-bottom: 30px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center; /* يخليها بالنص */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+/* COLORS 🔥 */
+.card.blue { background: #3498db; }
+.card.green { background: #2ecc71; }
+.card.orange { background: #e67e22; }
+
+/* ICON */
+.icon {
+    font-size: 40px;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* TEXT */
+.card h2 {
+    font-size: 35px;
+}

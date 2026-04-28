@@ -1,0 +1,27 @@
+
+CREATE TABLE Passengers (
+    PassengerID INT PRIMARY KEY,
+    FullName VARCHAR(100) NOT NULL,
+    PassportNumber VARCHAR(50) UNIQUE NOT NULL,
+    ContactNumber VARCHAR2(15) NOT NULL
+);
+
+CREATE TABLE Flights (
+    FlightID INT PRIMARY KEY,
+    FlightNumber VARCHAR(50) UNIQUE NOT NULL,
+    DepartureCity VARCHAR(50) NOT NULL,
+    ArrivalCity VARCHAR(50) NOT NULL,
+    DepartureDateTime DATE NOT NULL,
+    ArrivalDateTime DATE NOT NULL,
+    AvailableSeats INT NOT NULL
+);
+
+CREATE TABLE Bookings (
+    BookingID INT PRIMARY KEY,
+    PassengerID INT NOT NULL,
+    FlightID INT NOT NULL,
+    BookingDate DATE NOT NULL,
+    CONSTRAINT FK_Passenger FOREIGN KEY (PassengerID) REFERENCES Passengers(PassengerID) ON DELETE CASCADE,
+    CONSTRAINT FK_Flight FOREIGN KEY (FlightID) REFERENCES Flights(FlightID) ON DELETE CASCADE
+);
+
