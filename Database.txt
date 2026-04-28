@@ -3,7 +3,7 @@ CREATE TABLE Passengers (
     PassengerID INT PRIMARY KEY,
     FullName VARCHAR(100) NOT NULL,
     PassportNumber VARCHAR(50) UNIQUE NOT NULL,
-    ContactNumber VARCHAR2(15) NOT NULL
+    ContactNumber VARCHAR(15) NOT NULL
 );
 
 CREATE TABLE Flights (
